@@ -8,7 +8,7 @@ public class Main {
         Human Maks = new Stundent();
         try{
             test(Vlad);
-        } catch (Exception e){
+        } catch (ClassCastException e){
             System.out.println("Ошибка!");
         }
 
