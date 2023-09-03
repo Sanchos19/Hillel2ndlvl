@@ -9,7 +9,7 @@ public class Main {
         }
         for (int i = 0; i < Sasha.charArray.length; i++) {
             System.out.println(Sasha.charArray[i]+ " "  + a + "-я буква имени");
-            a+=1;
+            a=a+1;
         }
     }
 }

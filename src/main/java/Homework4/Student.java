@@ -10,7 +10,6 @@ public class Student {
         System.out.println(age);
         System.out.println(name);
     }
-
     public String[] Knowledge = {"math", "english"};
     public char[] charArray ;
 }
