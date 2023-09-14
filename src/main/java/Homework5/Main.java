@@ -2,8 +2,11 @@ package Homework5;
 
 public class Main {
     public static void main(String[] args) {
-        House house1 = new House(2, 5, "Alexovskiy");
-        House house2 = new House(3, 9, "Alexandrovskiy");
-        System.out.println(house1.equals(house2));
+        House.Builder houseBuilder = new House.Builder("Alex");
+
+        House house = houseBuilder.setFloors(5).setRooms(15).build();
+        House house1 = houseBuilder.setFloors(3).setRooms(9).build();
+        System.out.println(house.equals(house1));
+
     }
 }

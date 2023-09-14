@@ -5,28 +5,30 @@ public class House {
     private int floors;
     private int rooms;
     private String name;
-    public House(int floors, int rooms, String name) {
+    private House(Builder builder) {
         this.floors = floors;
         this.rooms = rooms;
         this.name = name;
     }
-    public int getFloors() {
-        return floors;
-    }
-    public void setFloors(int floors) {
-        this.floors = floors;
-    }
-    public int getRooms() {
-        return rooms;
-    }
-    public void setRooms(int rooms) {
-        this.rooms = rooms;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public String toString() {return "floors=" + floors + ", rooms=" + rooms + ", name='" + name ;}
+    static class Builder{
+        private int floors;
+        private int rooms;
+        private String name;
+
+        public Builder(String name){
+            this.name = name;
+        }
+        public Builder setFloors(int floors) {
+            this.floors = floors;
+            return this;
+        }
+        public Builder setRooms(int rooms) {
+            this.rooms = rooms;
+            return this;
+        }
+        public House build(){ return new House(this);}
     }
     @Override
     public boolean equals(Object o) {
